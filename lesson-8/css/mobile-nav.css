@@ -15,7 +15,7 @@
 	--accent-color: #9E9E9E;
 	--primary-text: #212121;
 	--secondary-text: #757575;
-	--divider-color: #BDBDBD; 
+	--divider-color: #BDBDBD;
 }
 
 /* Basic page styles
@@ -29,15 +29,18 @@ html {
 	font: 100%/1.4 sans-serif;
 	color: var(--primary-text);
 }
+
 a {
 	color: var(--primary-color);
 	text-decoration: none;
 	font-weight: bold;
 }
+
 /* Very basic image responsiveness */
 img {
 	width: 100%;
 }
+
 /* STEP 5: Put diagnostic borders around HEADER, HEADER H1, and HEADER NAV */
 header {
 	outline: 3px dashed red;
@@ -53,30 +56,38 @@ header {
 	/* STEP 19d: Set the z-index to 50 to set the header (and the containing navigation panel) to be on top of the footer at the bottom of the viewport */
 	z-index: 60;
 }
+
 /* Link styling for the page-level header */
 header h1 {
 	outline: 3px dashed orange;
 	color: var(--text-and-icons);
 	margin: 20px;
 }
+
 header a:link {
 	color: var(--text-and-icons);
 }
+
 header a:visited {
 	color: var(--text-and-icons);
 }
+
 header a:focus {
 	color: var(--text-and-icons);
 }
+
 header a:hover {
 	color: var(--divider-color);
 }
+
 header a:active {
 	color: var(--primary-text);
 }
-header nav{
-	outline: 3px dashed green;	
+
+header nav {
+	outline: 3px dashed green;
 }
+
 main {
 	/* STEP 18a: The content of the page is a bit hard to read - let's add a top margin to the MAIN element, center it, and some padding */
 	margin: 100px auto;
@@ -85,6 +96,7 @@ main {
 	max-width: 768px;
 	/*common medium size device width*/
 }
+
 footer {
 	background-color: var(--primary-color);
 	color: var(--text-and-icons);
@@ -127,15 +139,18 @@ header nav ul {
 	/* STEP 17: Let's make this really cool and animate the navigation panel so that it slides out to the left by transitioning any change to the left: property value */
 	transition: left 0.1s;
 }
+
 header nav ul a {
 	/* STEP 8: Make the links wider for greater accessibility with touch */
 	display: block;
 	padding: 10px;
 }
+
 #toggle-menu {
 	/* STEP 15: Hide the checkbox form element - the label is all we need to be visible (thanks to the for="toggle-menu" attribute in the HTML) */
 	display: none;
 }
+
 label[for="toggle-menu"] {
 	color: var(--text-and-icons);
 	/* STEP 10a: Make the menu and close menu icons look good */
@@ -150,20 +165,24 @@ label[for="toggle-menu"] {
 	/* STEP 13b: Set the z-index for the LABEL to 200 so that it sits on top of the navigation panel */
 	z-index: 200;
 }
+
 #close {
 	font-weight: bold;
 	/* STEP 11: Hide the big close menu "X" to start with - we only need this to close the menu once the user opens it using the hamburger icon */
 	display: none;
 }
+
 /* STEP 12: Reveal the navigation menu UL when the label for the #toggle-menu input is checked, using the general sibling selector (~) */
-#toggle-menu:checked ~ ul {
+#toggle-menu:checked~ul {
 	left: 15%
 }
-#toggle-menu:checked + label #close {
+
+#toggle-menu:checked+label #close {
 	/* STEP 14a: If the toggle-menu checkbox is checked, show the menu close button/icon */
 	display: block;
 }
-#toggle-menu:checked + label #hamburger {
+
+#toggle-menu:checked+label #hamburger {
 	/* STEP 14b: If the toggle-menu checkbox is checked, then we should hide the hamburger button/icon because the close button/icon is now visible */
 	display: none;
 }
@@ -176,23 +195,27 @@ label[for="toggle-menu"] {
 */
 
 @media screen and (min-width: 768px) {
+
 	/* Hide the hamburger menu checkbox label (checkbox is already hidden) */
 	label[for="toggle-menu"] {
-			/* STEP 20: For large screens, we don't need the hamburger or the close menu icon/button */
-			
+		/* STEP 20: For large screens, we don't need the hamburger or the close menu icon/button */
+
 	}
+
 	header nav ul {
-			/* STEP 21a: Restore the navigation so that it is back in the regular flow of the page */
-			
-			/* STEP 21b: We don't need the grey background, anymore */
-			
+		/* STEP 21a: Restore the navigation so that it is back in the regular flow of the page */
+
+		/* STEP 21b: We don't need the grey background, anymore */
+
 	}
+
 	header nav li {
-			/* STEP 22: Set the LI elements to render horizontally instead of vertically */
-			
+		/* STEP 22: Set the LI elements to render horizontally instead of vertically */
+
 	}
+
 	header a:hover {
-			color: var(--light-primary-color);
+		color: var(--light-primary-color);
 	}
 }
 
@@ -210,26 +233,34 @@ table {
 	caption-side: top;
 	width: 100%;
 }
-td, th {
+
+td,
+th {
 	border: 1px solid var(--secondary-text);
 	padding: 0.5rem;
 }
+
 th {
 	background: var(--secondary-text);
 	color: var(--text-and-icons);
 }
+
 tbody th {
 	text-align: left;
 }
+
 tbody tr:nth-child(even) {
 	background-color: var(--divider-color);
 }
+
 tbody td {
 	text-align: right;
 }
+
 tfoot td {
 	font-size: 0.6rem;
 }
+
 caption {
 	font-weight: bold;
 	color: var(--secondary-text);
