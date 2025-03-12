@@ -83,7 +83,7 @@ main {
 	padding: 20px;
 	/* STEP 18b: We don't want the measure of the lines of body text to get too long - let's set a max-width on the MAIN element */
 	max-width: 768px;
-	//common medium size device width
+	/*common medium size device width*/
 }
 footer {
 	background-color: var(--primary-color);
